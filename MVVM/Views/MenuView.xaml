@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mauiverter.MVVM.Views.MenuView"
+             Title="MenuView"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <Style x:Key="OptionBorder" TargetType="Border">
+            <Setter Property="Stroke" Value="LightYellow"/>
+            <Setter Property="StrokeThickness" Value="1"/>
+            <Setter Property="StrokeShape" Value="RoundRectangle 10"/>
+            <Setter Property="Margin" Value="5, 5, 5, 10"/>
+        </Style>
+
+        <Style x:Key="OptionLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="CuteFont"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid
+        Grid.RowDefinitions="1*,3*,3*,3*"
+        Grid.ColumnDefinitions="*,*,*">
+
+        <Image Source="new.png"
+                Aspect="AspectFill"
+                Grid.RowSpan="4"
+                Grid.ColumnSpan="3"
+                Opacity=".8"
+                BackgroundColor="Black"/>
+        <Label 
+            Grid.Row="0"  
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Text="MAUI CONVERTER"
+            FontFamily="CuteFont"
+            FontSize="40"
+            Margin="0, 15, 0, 0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="information.png" BackgroundColor="Transparent"
+                             Clicked="OnInformationClicked"/>
+                <Label Text="Information" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="volume.png" BackgroundColor="Transparent"/>
+                <Label Text="Volume" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="2" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="length.png" BackgroundColor="Transparent"/>
+                <Label Text="Length" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="mass.png" BackgroundColor="Transparent"/>
+                <Label Text="Mass" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="temperature.png" BackgroundColor="Transparent"/>
+                <Label Text="Temperature" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="area.png" BackgroundColor="Transparent"/>
+                <Label Text="Area" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="0" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="speed.png" BackgroundColor="Transparent"/>
+                <Label Text="Speed" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="energy.png" BackgroundColor="Transparent"/>
+                <Label Text="Energy" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="2" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
+                <ImageButton Source="time.png" BackgroundColor="Transparent"/>
+                <Label Text="Time" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</ContentPage>
