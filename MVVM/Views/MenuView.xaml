@@ -51,56 +51,64 @@
 
         <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="volume.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="volume.png" BackgroundColor="Transparent"
+                             Clicked="OnVolumeClicked"/>
                 <Label Text="Volume" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="1" Grid.Column="2" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="length.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="length.png" BackgroundColor="Transparent"
+                             Clicked="OnLengthClicked"/>
                 <Label Text="Length" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="mass.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="mass.png" BackgroundColor="Transparent"
+                             Clicked="OnMassClicked"/>
                 <Label Text="Mass" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="temperature.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="temperature.png" BackgroundColor="Transparent"
+                             Clicked="OnTemperatureClicked"/>
                 <Label Text="Temperature" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="area.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="area.png" BackgroundColor="Transparent"
+                             Clicked="OnAreaClicked"/>
                 <Label Text="Area" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="3" Grid.Column="0" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="speed.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="speed.png" BackgroundColor="Transparent"
+                             Clicked="OnSpeedClicked"/>
                 <Label Text="Speed" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="energy.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="energy.png" BackgroundColor="Transparent"
+                             Clicked="OnEnergyClicked"/>
                 <Label Text="Energy" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
         <Border Grid.Row="3" Grid.Column="2" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
-                <ImageButton Source="time.png" BackgroundColor="Transparent"/>
+                <ImageButton Source="time.png" BackgroundColor="Transparent"
+                             Clicked="OnTimeClicked"/>
                 <Label Text="Time" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>

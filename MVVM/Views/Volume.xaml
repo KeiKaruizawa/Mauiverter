@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mauiverter.MVVM.Views.Volume"
+             xmlns:viewmodel="clr-namespace:Mauiverter.MVVM.ViewModels"
+             Title="Volume"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewmodel:Volume/>
+    </ContentPage.BindingContext>
+    
+    <Grid RowDefinitions="Auto, Auto, Auto, *, Auto">
+
+        <Image Source="new.png"
+           Aspect="AspectFill"
+           Grid.RowSpan="5"
+           Opacity=".8"
+           BackgroundColor="Black"/>
+
+        <Label Grid.Row="0"
+           Text="Volume Converter"
+           FontFamily="CuteFont"
+           FontSize="40"
+           HorizontalOptions="Center"
+           Margin="0,50,0,0"/>
+
+        <VerticalStackLayout Grid.Row="1" Margin="25">
+            <Label Text="From:" FontFamily="CuteFont" FontSize="20" Padding="5"/>
+            <Picker ItemsSource="{Binding Units}"
+                SelectedItem="{Binding FromUnit}"
+                FontSize="18" Margin="5"
+                BackgroundColor="LightYellow"/>
+            <Entry Placeholder="Enter value"
+               Text="{Binding InputValue}"
+               Keyboard="Numeric"
+               FontSize="18"  Margin="5"
+               BackgroundColor="White"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Margin="25, -10, 25, 25">
+            <Label Text="To:" FontFamily="CuteFont" FontSize="20" Padding="5"/>
+            <Picker ItemsSource="{Binding Units}"
+                SelectedItem="{Binding ToUnit}"
+                FontSize="18" Margin="5"
+                BackgroundColor="LightYellow"/>
+        </VerticalStackLayout>
+
+        <Border Grid.Row="3" 
+            Stroke="LightYellow"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10"
+            Padding="15"
+            VerticalOptions="Start"
+            Margin="30">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Result:" 
+                   FontFamily="CuteFont" 
+                   FontSize="22"
+                   FontAttributes="Bold"/>
+                <Label Text="{Binding Result}"
+                   FontSize="22" 
+                   TextColor="DarkBlue"
+                   FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Button Grid.Row="4"
+            Text="Back to Menu"
+            FontFamily="CuteFont"
+            FontSize="18"
+            BackgroundColor="DarkBlue"
+            TextColor="White"
+            Clicked="OnBackClicked"
+            Margin="30"/>
+    </Grid>
+</ContentPage>
