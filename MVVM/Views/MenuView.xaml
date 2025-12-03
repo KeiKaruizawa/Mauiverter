@@ -16,6 +16,7 @@
         <Style x:Key="OptionLabel" TargetType="Label">
             <Setter Property="FontFamily" Value="CuteFont"/>
             <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="Black"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
         </Style>
     </ContentPage.Resources>
@@ -36,6 +37,7 @@
             Grid.ColumnSpan="3"
             Text="MAUI CONVERTER"
             FontFamily="CuteFont"
+            TextColor="Black"
             FontSize="40"
             Margin="0, 15, 0, 0"
             VerticalOptions="Center" 
