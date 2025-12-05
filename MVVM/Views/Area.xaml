@@ -13,61 +13,68 @@
     <Grid RowDefinitions="Auto, Auto, Auto, *, Auto">
 
         <Image Source="wallpaper.png"
-           Aspect="AspectFill"
-           Grid.RowSpan="5"
-           Opacity=".8"
-           BackgroundColor="Black"/>
+       Aspect="AspectFill"
+       Grid.RowSpan="5"
+       Opacity=".8"
+       BackgroundColor="Black"/>
 
         <Label Grid.Row="0"
-           Text="Area Converter"
-           FontFamily="Minecraft"
-           FontSize="40"
-           TextColor="Black"
-           HorizontalOptions="Center"
-           Margin="0,50,0,0">
+       Text="Area Converter"
+       FontFamily="Minecraft"
+       FontSize="40"
+       HorizontalOptions="Center"
+       Margin="0,50,0,0">
             <Label.Shadow>
                 <Shadow Brush="White" Offset="3,3" Radius="10" />
             </Label.Shadow>
         </Label>
 
         <VerticalStackLayout Grid.Row="1" Margin="25">
-            <Label Text="From:" FontFamily="CuteFont" FontSize="20" Padding="5"/>
+            <Label Text="From:" FontFamily="Minecraft" FontSize="22" Padding="5" FontAttributes="Bold">
+                <Label.Shadow>
+                    <Shadow Brush="White" Offset="3,3" Radius="10" />
+                </Label.Shadow>
+            </Label>
             <Picker ItemsSource="{Binding Units}"
-                SelectedItem="{Binding FromUnit}"
-                FontSize="18" Margin="5"
-                BackgroundColor="LightYellow"/>
+            SelectedItem="{Binding FromUnit}"
+            FontSize="18" Margin="5"
+            BackgroundColor="LightYellow"/>
             <Entry Placeholder="Enter value"
-               Text="{Binding InputValue}"
-               Keyboard="Numeric"
-               FontSize="18"  Margin="5"
-               BackgroundColor="White"/>
+           Text="{Binding InputValue}"
+           Keyboard="Numeric"
+           FontSize="18"  Margin="5"
+           BackgroundColor="White"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="2" Margin="25, -10, 25, 25">
-            <Label Text="To:" FontFamily="CuteFont" FontSize="20" Padding="5"/>
+            <Label Text="To:" FontFamily="Minecraft" FontSize="22" Padding="5" FontAttributes="Bold">
+                <Label.Shadow>
+                    <Shadow Brush="White" Offset="3,3" Radius="10" />
+                </Label.Shadow>
+            </Label>
             <Picker ItemsSource="{Binding Units}"
-                SelectedItem="{Binding ToUnit}"
-                FontSize="18" Margin="5"
-                BackgroundColor="LightYellow"/>
+            SelectedItem="{Binding ToUnit}"
+            FontSize="18" Margin="5"
+            BackgroundColor="LightYellow"/>
         </VerticalStackLayout>
 
         <Border Grid.Row="3" 
-            Stroke="LightYellow"
-            StrokeThickness="2"
-            StrokeShape="RoundRectangle 10"
-            Padding="15"
-            VerticalOptions="Start"
-            Margin="30"
-            BackgroundColor="#40FFFFFF">
+        Stroke="LightYellow"
+        StrokeThickness="2"
+        StrokeShape="RoundRectangle 10"
+        Padding="15"
+        VerticalOptions="Start"
+        Margin="30"
+        BackgroundColor="#40FFFFFF">
             <VerticalStackLayout Spacing="10">
                 <Label Text="Result:" 
-                   FontFamily="CuteFont" 
-                   FontSize="22"
-                   FontAttributes="Bold"/>
+               FontFamily="Minecraft" 
+               FontSize="22" CharacterSpacing=".5"
+               FontAttributes="Bold"/>
                 <Label Text="{Binding Result}"
-                   FontSize="26" 
-                   TextColor="DarkBlue"
-                   FontAttributes="Bold">
+               FontSize="26" 
+               TextColor="DarkBlue"
+               FontAttributes="Bold">
                     <Label.Shadow>
                         <Shadow Brush="White" Offset=".5,.5" Radius="3" />
                     </Label.Shadow>
@@ -76,12 +83,12 @@
         </Border>
 
         <Button Grid.Row="4"
-            Text="Back to Menu"
-            FontFamily="Minecraft"
-            FontSize="20" CharacterSpacing="1"
-            BackgroundColor="DarkBlue"
-            TextColor="White"
-            Clicked="OnBackClicked"
-            Margin="30"/>
+        Text="Back to Menu"
+        FontFamily="Minecraft"
+        FontSize="20" CharacterSpacing="1"
+        BackgroundColor="DarkBlue"
+        TextColor="White"
+        Clicked="OnBackClicked"
+        Margin="30"/>
     </Grid>
 </ContentPage>
