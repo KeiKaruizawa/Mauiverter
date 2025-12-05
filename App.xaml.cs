@@ -7,11 +7,15 @@ namespace Mauiverter
         public App()
         {
             InitializeComponent();
+        }
 
             //var navpage = new NavigationPage(new MenuView());
             //return new Window(navpage);
 
-            MainPage = new NavigationPage(new MenuView());
-        }
+         protected override Window CreateWindow(IActivationState? activationState)
+         {
+            var navPage = new NavigationPage(new MenuView());
+            return new Window(navPage);
+         }
     }
 }

@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="Mauiverter.MVVM.Views.MenuView"
              Title="MenuView"
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
         <Style x:Key="OptionBorder" TargetType="Border">
-            <Setter Property="Stroke" Value="LightYellow"/>
+            <Setter Property="Stroke" Value="#80FFFFFF"/>
             <Setter Property="StrokeThickness" Value="1"/>
-            <Setter Property="StrokeShape" Value="RoundRectangle 10"/>
-            <Setter Property="Margin" Value="5, 5, 5, 10"/>
+            <Setter Property="StrokeShape" Value="RoundRectangle 15"/>
+            <Setter Property="BackgroundColor" Value="#40FFFFFF"/>
+            <Setter Property="Margin" Value="7, 5, 7, 10"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Shadow">
+                <Setter.Value>
+                    <Shadow Brush="#80000000" Offset="5,5" Radius="20" />
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <Style x:Key="OptionLabel" TargetType="Label">
-            <Setter Property="FontFamily" Value="CuteFont"/>
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Minecraft"/>
+            <Setter Property="FontSize" Value="19"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="CharacterSpacing" Value="1"/>
+            <Setter Property="TextColor" Value="black"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="Shadow">
+                <Setter.Value>
+                    <Shadow Brush="GhostWhite" Offset="1.5,1.5" Radius="2"/>
+                </Setter.Value>
+            </Setter>
         </Style>
     </ContentPage.Resources>
     
@@ -24,7 +40,7 @@
         Grid.RowDefinitions="1*,3*,3*,3*"
         Grid.ColumnDefinitions="*,*,*">
 
-        <Image Source="new.png"
+        <Image Source="wallpaper.png"
                 Aspect="AspectFill"
                 Grid.RowSpan="4"
                 Grid.ColumnSpan="3"
@@ -35,12 +51,20 @@
             Grid.Column="0"
             Grid.ColumnSpan="3"
             Text="MAUI CONVERTER"
-            FontFamily="CuteFont"
-            FontSize="40"
+            FontFamily="Minecraft" FontAttributes="Bold"
+            FontSize="40" TextColor="Black" 
+            CharacterSpacing=".7" 
             Margin="0, 15, 0, 0"
             VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-
+            HorizontalOptions="Center">
+            
+            <Label.Shadow>
+                <Shadow Brush="White" 
+                    Offset="3,3"
+                    Radius="10" />
+            </Label.Shadow>
+        </Label>
+            
         <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
                 <ImageButton Source="information.png" BackgroundColor="Transparent"
@@ -83,25 +107,25 @@
 
         <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
+                <ImageButton Source="energy.png" BackgroundColor="Transparent"
+                             Clicked="OnEnergyClicked"/>
+                <Label Text="Energy" Style="{StaticResource OptionLabel}"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="0" Style="{StaticResource OptionBorder}">
+            <VerticalStackLayout>
                 <ImageButton Source="area.png" BackgroundColor="Transparent"
                              Clicked="OnAreaClicked"/>
                 <Label Text="Area" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 
-        <Border Grid.Row="3" Grid.Column="0" Style="{StaticResource OptionBorder}">
+        <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource OptionBorder}">
             <VerticalStackLayout>
                 <ImageButton Source="speed.png" BackgroundColor="Transparent"
                              Clicked="OnSpeedClicked"/>
                 <Label Text="Speed" Style="{StaticResource OptionLabel}"/>
-            </VerticalStackLayout>
-        </Border>
-
-        <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource OptionBorder}">
-            <VerticalStackLayout>
-                <ImageButton Source="energy.png" BackgroundColor="Transparent"
-                             Clicked="OnEnergyClicked"/>
-                <Label Text="Energy" Style="{StaticResource OptionLabel}"/>
             </VerticalStackLayout>
         </Border>
 

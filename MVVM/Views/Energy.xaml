@@ -12,21 +12,29 @@
 
     <Grid RowDefinitions="Auto, Auto, Auto, *, Auto">
 
-        <Image Source="new.png"
+        <Image Source="wallpaper.png"
            Aspect="AspectFill"
            Grid.RowSpan="5"
            Opacity=".8"
            BackgroundColor="Black"/>
 
         <Label Grid.Row="0"
-           Text="Data Storage Converter"
-           FontFamily="CuteFont"
+           Text="Energy Converter"
+           FontFamily="Minecraft"
            FontSize="40"
            HorizontalOptions="Center"
-           Margin="0,50,0,0"/>
+           Margin="0,50,0,0">
+            <Label.Shadow>
+                <Shadow Brush="White" Offset="3,3" Radius="10" />
+            </Label.Shadow>
+        </Label>
 
         <VerticalStackLayout Grid.Row="1" Margin="25">
-            <Label Text="From:" FontFamily="CuteFont" FontSize="20" Padding="5"/>
+            <Label Text="From:" FontFamily="Minecraft" FontSize="22" Padding="5" FontAttributes="Bold">
+                <Label.Shadow>
+                    <Shadow Brush="White" Offset="3,3" Radius="10" />
+                </Label.Shadow>
+            </Label>
             <Picker ItemsSource="{Binding Units}"
                 SelectedItem="{Binding FromUnit}"
                 FontSize="18" Margin="5"
@@ -39,7 +47,11 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="2" Margin="25, -10, 25, 25">
-            <Label Text="To:" FontFamily="CuteFont" FontSize="20" Padding="5"/>
+            <Label Text="To:" FontFamily="Minecraft" FontSize="22" Padding="5" FontAttributes="Bold">
+                <Label.Shadow>
+                    <Shadow Brush="White" Offset="3,3" Radius="10" />
+                </Label.Shadow>
+            </Label>
             <Picker ItemsSource="{Binding Units}"
                 SelectedItem="{Binding ToUnit}"
                 FontSize="18" Margin="5"
@@ -52,23 +64,28 @@
             StrokeShape="RoundRectangle 10"
             Padding="15"
             VerticalOptions="Start"
-            Margin="30">
+            Margin="30"
+            BackgroundColor="#40FFFFFF">
             <VerticalStackLayout Spacing="10">
                 <Label Text="Result:" 
-                   FontFamily="CuteFont" 
-                   FontSize="22"
+                   FontFamily="Minecraft" 
+                   FontSize="22" CharacterSpacing=".5"
                    FontAttributes="Bold"/>
                 <Label Text="{Binding Result}"
-                   FontSize="22" 
+                   FontSize="26" 
                    TextColor="DarkBlue"
-                   FontAttributes="Bold"/>
+                   FontAttributes="Bold">
+                    <Label.Shadow>
+                        <Shadow Brush="White" Offset=".5,.5" Radius="3" />
+                    </Label.Shadow>
+                </Label>
             </VerticalStackLayout>
         </Border>
 
         <Button Grid.Row="4"
             Text="Back to Menu"
-            FontFamily="CuteFont"
-            FontSize="18"
+            FontFamily="Minecraft"
+            FontSize="20" CharacterSpacing="1"
             BackgroundColor="DarkBlue"
             TextColor="White"
             Clicked="OnBackClicked"
