@@ -67,13 +67,21 @@ namespace Mauiverter.MVVM.ViewModels
             {
                 "Bit (b)",
                 "Byte (B)",
+                "Kilobit (Kb)",
                 "Kilobyte (KB)",
+                "Megabit (Mb)",
                 "Megabyte (MB)",
+                "Gigabit (Gb)",
                 "Gigabyte (GB)",
+                "Terabit (Tb)",
                 "Terabyte (TB)",
+                "Petabit (Pb)",
                 "Petabyte (PB)",
+                "Exabit (Eb)",
                 "Exabyte (EB)",
+                "Zettabit (Zb)",
                 "Zettabyte (ZB)",
+                "Yottabit (Yb)",
                 "Yottabyte (YB)"
             };
 
@@ -108,13 +116,21 @@ namespace Mauiverter.MVVM.ViewModels
             {
                 "Bit (b)" => value,
                 "Byte (B)" => value * 8,
+                "Kilobit (Kb)" => value * 1000,
                 "Kilobyte (KB)" => value * 8 * 1024,
+                "Megabit (Mb)" => value * 1000 * 1000,
                 "Megabyte (MB)" => value * 8 * 1024 * 1024,
-                "Gigabyte (GB)" => value * 8 * 1024 * 1024 * 1024,
+                "Gigabit (Gb)" => value * Math.Pow(1000, 3),
+                "Gigabyte (GB)" => value * 8 * Math.Pow(1024, 3),
+                "Terabit (Tb)" => value * Math.Pow(1000, 4),
                 "Terabyte (TB)" => value * 8 * Math.Pow(1024, 4),
+                "Petabit (Pb)" => value * Math.Pow(1000, 5),
                 "Petabyte (PB)" => value * 8 * Math.Pow(1024, 5),
+                "Exabit (Eb)" => value * Math.Pow(1000, 6),
                 "Exabyte (EB)" => value * 8 * Math.Pow(1024, 6),
+                "Zettabit (Zb)" => value * Math.Pow(1000, 7),
                 "Zettabyte (ZB)" => value * 8 * Math.Pow(1024, 7),
+                "Yottabit (Yb)" => value * Math.Pow(1000, 8),
                 "Yottabyte (YB)" => value * 8 * Math.Pow(1024, 8),
                 _ => 0
             };
@@ -126,13 +142,21 @@ namespace Mauiverter.MVVM.ViewModels
             {
                 "Bit (b)" => bits,
                 "Byte (B)" => bits / 8,
+                "Kilobit (Kb)" => bits / 1000,
                 "Kilobyte (KB)" => bits / (8 * 1024),
+                "Megabit (Mb)" => bits / (1000 * 1000),
                 "Megabyte (MB)" => bits / (8 * 1024 * 1024),
+                "Gigabit (Gb)" => bits / Math.Pow(1000, 3),
                 "Gigabyte (GB)" => bits / (8 * Math.Pow(1024, 3)),
+                "Terabit (Tb)" => bits / Math.Pow(1000, 4),
                 "Terabyte (TB)" => bits / (8 * Math.Pow(1024, 4)),
+                "Petabit (Pb)" => bits / Math.Pow(1000, 5),
                 "Petabyte (PB)" => bits / (8 * Math.Pow(1024, 5)),
+                "Exabit (Eb)" => bits / Math.Pow(1000, 6),
                 "Exabyte (EB)" => bits / (8 * Math.Pow(1024, 6)),
+                "Zettabit (Zb)" => bits / Math.Pow(1000, 7),
                 "Zettabyte (ZB)" => bits / (8 * Math.Pow(1024, 7)),
+                "Yottabit (Yb)" => bits / Math.Pow(1000, 8),
                 "Yottabyte (YB)" => bits / (8 * Math.Pow(1024, 8)),
                 _ => 0
             };

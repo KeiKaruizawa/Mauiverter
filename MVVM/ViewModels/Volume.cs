@@ -68,17 +68,21 @@ namespace Mauiverter.MVVM.ViewModels
                 "Milliliter (mL)",
                 "Liter (L)",
                 "Cubic Meter (m³)",
-                "Gallon (US)",
-                "Quart (US)",
-                "Pint (US)",
-                "Cup (US)",
-                "Fluid Ounce (US)",
-                "Tablespoon (US)",
-                "Teaspoon (US)"
+                "Cubic Centimeter (cm³)",
+                "Cubic Inch (in³)",
+                "Cubic Foot (ft³)",
+                "Fluid Ounce US (fl oz)",
+                "Cup US (cup)",
+                "Pint US (pt)",
+                "Quart US (qt)",
+                "Gallon US (gal)",
+                "Gallon UK (gal UK)",
+                "Barrel (bbl)",
+                "Tablespoon (tbsp)",
+                "Teaspoon (tsp)"
             };
-
-            FromUnit = "Milliliter (mL)";
-            ToUnit = "Liter (L)";
+            FromUnit = "Liter (L)";
+            ToUnit = "Gallon US (gal)";
             InputValue = "0";
         }
 
@@ -109,13 +113,18 @@ namespace Mauiverter.MVVM.ViewModels
                 "Milliliter (mL)" => value / 1000,
                 "Liter (L)" => value,
                 "Cubic Meter (m³)" => value * 1000,
-                "Gallon (US)" => value * 3.78541,
-                "Quart (US)" => value * 0.946353,
-                "Pint (US)" => value * 0.473176,
-                "Cup (US)" => value * 0.236588,
-                "Fluid Ounce (US)" => value * 0.0295735,
-                "Tablespoon (US)" => value * 0.0147868,
-                "Teaspoon (US)" => value * 0.00492892,
+                "Cubic Centimeter (cm³)" => value / 1000,
+                "Cubic Inch (in³)" => value * 0.0163871,
+                "Cubic Foot (ft³)" => value * 28.316846592,
+                "Fluid Ounce US (fl oz)" => value * 0.0295735,
+                "Cup US (cup)" => value * 0.236588,
+                "Pint US (pt)" => value * 0.473176,
+                "Quart US (qt)" => value * 0.946353,
+                "Gallon US (gal)" => value * 3.78541,
+                "Gallon UK (gal UK)" => value * 4.54609,
+                "Barrel (bbl)" => value * 158.987,
+                "Tablespoon (tbsp)" => value * 0.0147868,
+                "Teaspoon (tsp)" => value * 0.00492892,
                 _ => 0
             };
         }
@@ -127,13 +136,18 @@ namespace Mauiverter.MVVM.ViewModels
                 "Milliliter (mL)" => liters * 1000,
                 "Liter (L)" => liters,
                 "Cubic Meter (m³)" => liters / 1000,
-                "Gallon (US)" => liters / 3.78541,
-                "Quart (US)" => liters / 0.946353,
-                "Pint (US)" => liters / 0.473176,
-                "Cup (US)" => liters / 0.236588,
-                "Fluid Ounce (US)" => liters / 0.0295735,
-                "Tablespoon (US)" => liters / 0.0147868,
-                "Teaspoon (US)" => liters / 0.00492892,
+                "Cubic Centimeter (cm³)" => liters * 1000,
+                "Cubic Inch (in³)" => liters / 0.0163871,
+                "Cubic Foot (ft³)" => liters / 28.316846592,
+                "Fluid Ounce US (fl oz)" => liters / 0.0295735,
+                "Cup US (cup)" => liters / 0.236588,
+                "Pint US (pt)" => liters / 0.473176,
+                "Quart US (qt)" => liters / 0.946353,
+                "Gallon US (gal)" => liters / 3.78541,
+                "Gallon UK (gal UK)" => liters / 4.54609,
+                "Barrel (bbl)" => liters / 158.987,
+                "Tablespoon (tbsp)" => liters / 0.0147868,
+                "Teaspoon (tsp)" => liters / 0.00492892,
                 _ => 0
             };
         }

@@ -65,7 +65,7 @@ namespace Mauiverter.MVVM.ViewModels
         {
             Units = new ObservableCollection<string>
             {
-                "Millimeter (mm)",
+              "Millimeter (mm)",
                 "Centimeter (cm)",
                 "Meter (m)",
                 "Kilometer (km)",
@@ -73,11 +73,13 @@ namespace Mauiverter.MVVM.ViewModels
                 "Foot (ft)",
                 "Yard (yd)",
                 "Mile (mi)",
-                "Nautical Mile (nmi)"
+                "Nautical Mile (nmi)",
+                "Micrometer (µm)",
+                "Nanometer (nm)",
+                "Mil (mil)"
             };
-
-            FromUnit = "Millimeter (mm)";
-            ToUnit = "Centimeter (cm)";
+            FromUnit = "Meter (m)";
+            ToUnit = "Foot (ft)";
             InputValue = "0";
         }
 
@@ -112,8 +114,11 @@ namespace Mauiverter.MVVM.ViewModels
                 "Inch (in)" => value * 0.0254,
                 "Foot (ft)" => value * 0.3048,
                 "Yard (yd)" => value * 0.9144,
-                "Mile (mi)" => value * 1609.34,
+                "Mile (mi)" => value * 1609.344,
                 "Nautical Mile (nmi)" => value * 1852,
+                "Micrometer (µm)" => value / 1000000,
+                "Nanometer (nm)" => value / 1000000000,
+                "Mil (mil)" => value * 0.0000254,
                 _ => 0
             };
         }
@@ -129,8 +134,11 @@ namespace Mauiverter.MVVM.ViewModels
                 "Inch (in)" => meters / 0.0254,
                 "Foot (ft)" => meters / 0.3048,
                 "Yard (yd)" => meters / 0.9144,
-                "Mile (mi)" => meters / 1609.34,
+                "Mile (mi)" => meters / 1609.344,
                 "Nautical Mile (nmi)" => meters / 1852,
+                "Micrometer (µm)" => meters * 1000000,
+                "Nanometer (nm)" => meters * 1000000000,
+                "Mil (mil)" => meters / 0.0000254,
                 _ => 0
             };
         }

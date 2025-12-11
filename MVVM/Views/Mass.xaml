@@ -21,7 +21,7 @@
         <Label Grid.Row="0"
            Text="Mass Converter"
            FontFamily="Minecraft"
-           FontSize="40"
+           FontSize="30" TextColor="DarkBlue" FontAttributes="Bold"
            HorizontalOptions="Center"
            Margin="0,50,0,0">
             <Label.Shadow>
@@ -37,11 +37,11 @@
             </Label>
             <Picker ItemsSource="{Binding Units}"
                 SelectedItem="{Binding FromUnit}"
-                FontSize="18" Margin="5"
+                FontSize="18" Margin="5" TextColor="Black"
                 BackgroundColor="LightYellow"/>
             <Entry Placeholder="Enter value"
                Text="{Binding InputValue}"
-               Keyboard="Numeric"
+               Keyboard="Numeric" TextColor="Black"
                FontSize="18"  Margin="5"
                BackgroundColor="White"/>
         </VerticalStackLayout>
@@ -54,7 +54,7 @@
             </Label>
             <Picker ItemsSource="{Binding Units}"
                 SelectedItem="{Binding ToUnit}"
-                FontSize="18" Margin="5"
+                FontSize="18" Margin="5" TextColor="Black"
                 BackgroundColor="LightYellow"/>
         </VerticalStackLayout>
 
@@ -69,10 +69,10 @@
             <VerticalStackLayout Spacing="10">
                 <Label Text="Result:" 
                    FontFamily="Minecraft" 
-                   FontSize="22" CharacterSpacing=".5"
+                   FontSize="22" CharacterSpacing="1"
                    FontAttributes="Bold"/>
                 <Label Text="{Binding Result}"
-                   FontSize="26" 
+                   FontSize="28" 
                    TextColor="DarkBlue"
                    FontAttributes="Bold">
                     <Label.Shadow>

@@ -70,9 +70,12 @@ namespace Mauiverter.MVVM.ViewModels
                 "Kilometers per Hour (km/h)",
                 "Miles per Hour (mph)",
                 "Feet per Second (ft/s)",
-                "Knot (kn)"
+                "Knots (kn)",
+                "Mach (Ma)",
+                "Speed of Light (c)",
+                "Centimeters per Second (cm/s)",
+                "Inches per Second (in/s)"
             };
-
             FromUnit = "Meters per Second (m/s)";
             ToUnit = "Kilometers per Hour (km/h)";
             InputValue = "0";
@@ -106,7 +109,11 @@ namespace Mauiverter.MVVM.ViewModels
                 "Kilometers per Hour (km/h)" => value / 3.6,
                 "Miles per Hour (mph)" => value * 0.44704,
                 "Feet per Second (ft/s)" => value * 0.3048,
-                "Knot (kn)" => value * 0.514444,
+                "Knots (kn)" => value * 0.514444,
+                "Mach (Ma)" => value * 343,
+                "Speed of Light (c)" => value * 299792458,
+                "Centimeters per Second (cm/s)" => value / 100,
+                "Inches per Second (in/s)" => value * 0.0254,
                 _ => 0
             };
         }
@@ -119,7 +126,11 @@ namespace Mauiverter.MVVM.ViewModels
                 "Kilometers per Hour (km/h)" => mps * 3.6,
                 "Miles per Hour (mph)" => mps / 0.44704,
                 "Feet per Second (ft/s)" => mps / 0.3048,
-                "Knot (kn)" => mps / 0.514444,
+                "Knots (kn)" => mps / 0.514444,
+                "Mach (Ma)" => mps / 343,
+                "Speed of Light (c)" => mps / 299792458,
+                "Centimeters per Second (cm/s)" => mps * 100,
+                "Inches per Second (in/s)" => mps / 0.0254,
                 _ => 0
             };
         }

@@ -71,11 +71,13 @@ namespace Mauiverter.MVVM.ViewModels
                 "Kilocalorie (kcal)",
                 "Watt-hour (Wh)",
                 "Kilowatt-hour (kWh)",
-                "Electronvolt (eV)"
+                "Electronvolt (eV)",
+                "British Thermal Unit (BTU)",
+                "Foot-pound (ft·lb)",
+                "Erg (erg)"
             };
-
             FromUnit = "Joule (J)";
-            ToUnit = "Kilojoule (kJ)";
+            ToUnit = "Kilocalorie (kcal)";
             InputValue = "0";
         }
 
@@ -108,8 +110,11 @@ namespace Mauiverter.MVVM.ViewModels
                 "Calorie (cal)" => value * 4.184,
                 "Kilocalorie (kcal)" => value * 4184,
                 "Watt-hour (Wh)" => value * 3600,
-                "Kilowatt-hour (kWh)" => value * 3_600_000,
-                "Electronvolt (eV)" => value * 1.60218e-19,
+                "Kilowatt-hour (kWh)" => value * 3600000,
+                "Electronvolt (eV)" => value * 1.602176634e-19,
+                "British Thermal Unit (BTU)" => value * 1055.06,
+                "Foot-pound (ft·lb)" => value * 1.3558179483314004,
+                "Erg (erg)" => value * 1e-7,
                 _ => 0
             };
         }
@@ -123,8 +128,11 @@ namespace Mauiverter.MVVM.ViewModels
                 "Calorie (cal)" => joules / 4.184,
                 "Kilocalorie (kcal)" => joules / 4184,
                 "Watt-hour (Wh)" => joules / 3600,
-                "Kilowatt-hour (kWh)" => joules / 3_600_000,
-                "Electronvolt (eV)" => joules / 1.60218e-19,
+                "Kilowatt-hour (kWh)" => joules / 3600000,
+                "Electronvolt (eV)" => joules / 1.602176634e-19,
+                "British Thermal Unit (BTU)" => joules / 1055.06,
+                "Foot-pound (ft·lb)" => joules / 1.3558179483314004,
+                "Erg (erg)" => joules / 1e-7,
                 _ => 0
             };
         }

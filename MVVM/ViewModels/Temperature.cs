@@ -67,9 +67,9 @@ namespace Mauiverter.MVVM.ViewModels
             {
                 "Celsius (°C)",
                 "Fahrenheit (°F)",
-                "Kelvin (K)"
+                "Kelvin (K)",
+                "Rankine (°R)"
             };
-
             FromUnit = "Celsius (°C)";
             ToUnit = "Fahrenheit (°F)";
             InputValue = "0";
@@ -101,6 +101,7 @@ namespace Mauiverter.MVVM.ViewModels
                 "Celsius (°C)" => value,
                 "Fahrenheit (°F)" => (value - 32) * 5 / 9,
                 "Kelvin (K)" => value - 273.15,
+                "Rankine (°R)" => (value - 491.67) * 5 / 9,
                 _ => 0
             };
 
@@ -110,6 +111,7 @@ namespace Mauiverter.MVVM.ViewModels
                 "Celsius (°C)" => celsius,
                 "Fahrenheit (°F)" => (celsius * 9 / 5) + 32,
                 "Kelvin (K)" => celsius + 273.15,
+                "Rankine (°R)" => (celsius + 273.15) * 9 / 5,
                 _ => 0
             };
         }

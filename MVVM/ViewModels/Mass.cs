@@ -73,11 +73,13 @@ namespace Mauiverter.MVVM.ViewModels
                 "Ounce (oz)",
                 "Pound (lb)",
                 "Stone (st)",
-                "Short Ton (US ton)"
+                "Short Ton (ton)",
+                "Long Ton (LT)",
+                "Carat (ct)",
+                "Microgram (µg)"
             };
-
-            FromUnit = "Milligram (mg)";
-            ToUnit = "Gram (g)";
+            FromUnit = "Kilogram (kg)";
+            ToUnit = "Pound (lb)";
             InputValue = "0";
         }
 
@@ -105,14 +107,17 @@ namespace Mauiverter.MVVM.ViewModels
         {
             return unit switch
             {
-                "Milligram (mg)" => value / 1_000_000,
+                "Milligram (mg)" => value / 1000000,
                 "Gram (g)" => value / 1000,
                 "Kilogram (kg)" => value,
                 "Metric Ton (t)" => value * 1000,
-                "Ounce (oz)" => value * 0.0283495,
-                "Pound (lb)" => value * 0.453592,
-                "Stone (st)" => value * 6.35029,
-                "Short Ton (US ton)" => value * 907.185,
+                "Ounce (oz)" => value * 0.028349523125,
+                "Pound (lb)" => value * 0.45359237,
+                "Stone (st)" => value * 6.35029318,
+                "Short Ton (ton)" => value * 907.18474,
+                "Long Ton (LT)" => value * 1016.0469088,
+                "Carat (ct)" => value * 0.0002,
+                "Microgram (µg)" => value / 1000000000,
                 _ => 0
             };
         }
@@ -121,14 +126,17 @@ namespace Mauiverter.MVVM.ViewModels
         {
             return unit switch
             {
-                "Milligram (mg)" => kg * 1_000_000,
+                "Milligram (mg)" => kg * 1000000,
                 "Gram (g)" => kg * 1000,
                 "Kilogram (kg)" => kg,
                 "Metric Ton (t)" => kg / 1000,
-                "Ounce (oz)" => kg / 0.0283495,
-                "Pound (lb)" => kg / 0.453592,
-                "Stone (st)" => kg / 6.35029,
-                "Short Ton (US ton)" => kg / 907.185,
+                "Ounce (oz)" => kg / 0.028349523125,
+                "Pound (lb)" => kg / 0.45359237,
+                "Stone (st)" => kg / 6.35029318,
+                "Short Ton (ton)" => kg / 907.18474,
+                "Long Ton (LT)" => kg / 1016.0469088,
+                "Carat (ct)" => kg / 0.0002,
+                "Microgram (µg)" => kg * 1000000000,
                 _ => 0
             };
         }
